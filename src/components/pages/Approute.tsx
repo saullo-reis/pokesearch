@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Input } from "../main/input/input";
 import { Cards } from "../main/cards/cards";
-import { Details } from "../main/details/details";
+import { Details } from "../main/detailsOfPokemons/details";
 
 export const AppRoutes = () => {
   return (
