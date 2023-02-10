@@ -64,4 +64,5 @@ export interface AbilitiesData{
     effect: string;
     short_effect: string;
   }>
+  name:string;
 }
