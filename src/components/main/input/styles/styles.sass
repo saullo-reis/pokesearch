@@ -1,0 +1,31 @@
+@use '../../../../globalStyles/mixins'
+@use '../../../../globalStyles/variables'
+
+.search
+    @include mixins.flex-center
+    flex-direction: column
+    height: 80vh
+    &-text
+        color: variables.$secondary-color
+        text-align: center
+        text-shadow: 2px 2px 2px black
+        margin: 40px 20px
+    &-input
+        border: none
+        text-align: center
+        margin: 20px 0
+        padding: 10px
+        border-radius: 8px
+    &-button
+        border: none
+        padding: 8px
+        color: variables.$neutro-color-light
+        font-weight: 700
+        border-radius: 8px
+        background-color: variables.$primary-color
+        transition: .7s
+        cursor: pointer
+        text-shadow: 2px 2px 2px black
+        &:hover
+            background-color: variables.$secondary-color
+            transform: scale(1.1)

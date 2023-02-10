@@ -1,0 +1,11 @@
+@use '../../../globalStyles/mixins'
+@use '../../../globalStyles/variables'
+.header
+    @include mixins.flex-center
+    background: linear-gradient(variables.$primary-color, variables.$neutro-color-gray)
+    height: 70px
+    &-logo
+        color: variables.$secondary-color
+        text-shadow: 2px 2px 2px black
+    
+    
