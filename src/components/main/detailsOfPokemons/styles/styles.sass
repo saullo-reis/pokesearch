@@ -1,0 +1,59 @@
+@use '../../../../globalStyles/mixins'
+@use '../../../../globalStyles/variables'
+
+.details
+    @include mixins.flex-center
+    min-height: 880px
+    align-items: center
+    flex-flow: row wrap
+    padding: 100px 10px
+    &-card
+        background-color: variables.$neutro-color-light
+        padding: 40px
+        border-radius: 8px
+        text-align: center
+        box-shadow: 2px 2px 3px black
+        margin: 10px 20px
+        &-img
+            width: 200px
+        &-name
+            font-size: 35px
+            font-weight: bold
+            padding: 20px 0
+            border-top: .5px solid black
+    &-abilities
+        background-color: variables.$neutro-color-light
+        padding: 20px
+        border-radius: 8px
+        width: 240px
+        text-align: center
+        box-shadow: 2px 2px 3px black
+        margin: 10px 20px
+        &-box
+            &-item
+                padding: 10px
+                background-color: variables.$primary-color
+                color: variables.$neutro-color-light
+                margin: 30px
+                position: relative
+                transition: .7s
+                &-span
+                    position: absolute
+                    right: 10px
+                    top: 22%
+                    transition: .7s
+                &:hover
+                    background-color: variables.$secondary-color
+                    .details-abilities-box-item-span
+                        transform: translateY(5px)
+    &-move
+        background-color: variables.$neutro-color-light
+        padding: 20px
+        border-radius: 8px
+        width: 240px
+        text-align: center
+        margin: 20px 20px
+        box-shadow: 2px 2px 3px black
+        &-box
+            height: 350px
+            overflow-y: scroll
