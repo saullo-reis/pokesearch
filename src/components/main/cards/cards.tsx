@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getDataOfPokemon, getEvolutions, getPokemon } from "../../get/gets";
-import { EvolutionChainTypes, CardDataTypes } from "../../utils/types";
+import { EvolutionChainTypes, CardDataTypes } from "../../../utils/types";
 import "./styles/styles.sass";
 
 export const Cards = () => {
