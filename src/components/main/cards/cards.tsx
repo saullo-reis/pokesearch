@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getDataOfPokemon, getEvolutions, getPokemon } from "../../get/gets";
 import { EvolutionChainTypes, CardDataTypes } from "../../../utils/types";
@@ -38,22 +38,22 @@ export const Cards = () => {
       evolutionChain !== undefined &&
       evolutionChain.evolves_to.length !== 0
     ) {
-      const evolutionOne = evolutionChain.evolves_to.map((element) => {
+      const evolveTo1 = evolutionChain.evolves_to.map((element) => {
         return element.species.name;
       });
 
-      const evolutionTwo = evolutionChain.evolves_to.map((element) => {
+      const evolveTo2 = evolutionChain.evolves_to.map((element) => {
         const map = element.evolves_to.map((element) => {
           return element.species.name;
         });
         return map;
       });
 
-      evolutionOne.map((element) => {
+      evolveTo1.map((element) => {
         arrayNamePokemons = [...arrayNamePokemons, element];
       });
 
-      evolutionTwo[0].map((element) => {
+      evolveTo2[0].map((element) => {
         arrayNamePokemons = [...arrayNamePokemons, element];
       });
 
@@ -93,25 +93,21 @@ export const Cards = () => {
       {pokeDataCards.length > 0 && (
         <>
           <h2 className="cards-text">
-            {pokeDataCards.length === 1 &&
-              "Esse é o pokemon que você pesquisou."}
-            {pokeDataCards.length < 1 &&
-              "Esse é o pokemon que você pesquisou e algumas evoluções."}
-          </h2>
-          <h2 className="cards-text">
             Clique no card do pokemon que você queira ver detalhes!
           </h2>
           <ul className="cards-box">
             {pokeDataCards.map((element: CardDataTypes, index: number) => {
               return (
-                <li key={index} className="cards-box-card">
-                  <img
-                    className="cards-box-card-img"
-                    alt="imagePokemon"
-                    src={element.sprites.front_default}
-                  ></img>
-                  <h3 className="cards-box-card-name">{element.name}</h3>
-                </li>
+                <Link to={`/pokemon/${element.name}`}>
+                  <li key={index} className="cards-box-card">
+                    <img
+                      className="cards-box-card-img"
+                      alt="imagePokemon"
+                      src={element.sprites.front_default}
+                    ></img>
+                    <h3 className="cards-box-card-name">{element.name}</h3>
+                  </li>
+                </Link>
               );
             })}
           </ul>

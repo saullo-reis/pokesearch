@@ -17,7 +17,7 @@ export const Input = () => {
         type="text"
         placeholder="Nome do pokemon"
       ></input>
-      <Link className="search-button" to={`/Cards/${name}`}>
+      <Link className="search-button" to={`/cards/${name}`}>
         Procurar
       </Link>
       <div></div>

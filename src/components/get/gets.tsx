@@ -17,3 +17,9 @@ export async function getPokemon(name: string){
   const json = await response.json();
   return json;
 }
+
+export async function getAbilities(url: string){
+  const response = await fetch(url+ "?pt-bt")
+  const json = await response.json()
+  return json
+}
