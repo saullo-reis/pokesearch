@@ -13,7 +13,7 @@
 
 - EN: On the main page you will find a search bar where you have to type the name of your pokemon and click on the button, the typed pokemon and its evolutions will appear, clicking on any of them will show details of the clicked pokemon.
 
-## Tecnologias Utilizadas:
+## Tecnologias Utilizadas | Technologies Used:
 
 - TypeScript
 - React
