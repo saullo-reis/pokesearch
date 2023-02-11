@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export interface CardDataTypes {
   name: string;
   sprites: {
@@ -56,7 +58,11 @@ export interface DataPokemonsType {
     }
   }>
   weight: number;
-
+  types:Array<{
+    type:{
+      name:string;
+    }
+  }>
 }
 
 export interface AbilitiesData{

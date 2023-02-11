@@ -4,7 +4,7 @@
 .details
     @include mixins.flex-center
     min-height: 880px
-    align-items: center
+    align-items: flex-start
     flex-flow: row wrap
     padding: 100px 10px
     &-card
@@ -14,6 +14,18 @@
         text-align: center
         box-shadow: 2px 2px 3px black
         margin: 10px 20px
+        width: 200px
+        position: relative
+        height: 500px
+        &-span
+            position: absolute
+            right: 0
+            top: 0
+            background-color: variables.$secondary-color
+            color: variables.$neutro-color-light
+            box-shadow: 2px 2px 3px black
+            border-end-start-radius: 8px
+            padding: 10px
         &-img
             width: 200px
         &-name
@@ -26,6 +38,7 @@
         padding: 20px
         border-radius: 8px
         width: 240px
+        height: 214px
         text-align: center
         box-shadow: 2px 2px 3px black
         margin: 10px 20px
@@ -37,21 +50,35 @@
                 margin: 30px
                 position: relative
                 transition: .7s
-                &-span
-                    position: absolute
-                    right: 10px
-                    top: 22%
-                    transition: .7s
                 &:hover
                     background-color: variables.$secondary-color
-    &-move
+
+    &-types
         background-color: variables.$neutro-color-light
         padding: 20px
         border-radius: 8px
         width: 240px
         text-align: center
-        margin: 20px 20px
+        height: 214px
         box-shadow: 2px 2px 3px black
+        margin: 10px 20px
+        &-box
+            &-item
+                padding: 10px
+                color: variables.$neutro-color-light
+                margin: 30px
+                position: relative
+                transition: .7s
+    &-move
+        background-color: variables.$neutro-color-light
+        padding: 40px
+        border-radius: 8px
+        text-align: center
+        box-shadow: 2px 2px 3px black
+        margin: 10px 20px
+        width: 200px
+        position: relative
+        height: 500px
         &-box
             height: 350px
             overflow-y: scroll
