@@ -111,8 +111,8 @@ export const Cards = () => {
               <ul className="cards-box">
                 {pokeDataCards.map((element: CardDataTypes, index: number) => {
                   return (
-                    <Link to={`/pokemon/${element.name}`}>
-                      <li key={index} className="cards-box-card" data-testid="card">
+                    <Link key={index} to={`/pokemon/${element.name}`}>
+                      <li key={index} className="cards-box-card">
                         <img
                           className="cards-box-card-img"
                           alt="imagePokemon"
