@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# PokeSearch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## PC & MOBILE
+  ### PC
+  ![gifPokemonDesktop](https://user-images.githubusercontent.com/93871055/218237944-e102df35-d636-4606-9b96-f16860770fbc.gif)
+  ### MOBILE
+  ![gifPokemonMobille](https://user-images.githubusercontent.com/93871055/218237950-eafa77ba-fa94-434f-8863-93abb0517c78.gif)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Como usar | How to Use?
 
-### `npm start`
+- PT-BR : Na página principal você vai encontrar com uma barra de pesquisa em que você tem que digitar o nome do seu pokemon e clicar no botão, vai aparecer o pokemon digitado e suas evoluções, ao clicar em algum deles irá mostrar detalhes do pokemon clicado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- EN: On the main page you will find a search bar where you have to type the name of your pokemon and click on the button, the typed pokemon and its evolutions will appear, clicking on any of them will show details of the clicked pokemon.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias Utilizadas:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- TypeScript
+- React
+- Sass
+- React-Router
