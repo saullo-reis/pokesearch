@@ -1,11 +1,7 @@
 import "./styles/styles.sass";
-interface Props {
-  width: number | string;
-  height: number | string;
-  borderRadius?: number;
-}
+import { PropsSkeleton } from "../../../utils/types";
 
-function Skeleton({ width, height, borderRadius }: Props) {
+function Skeleton({ width, height, borderRadius }: PropsSkeleton) {
   return (
     <li
       className="container"

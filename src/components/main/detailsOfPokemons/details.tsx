@@ -6,7 +6,7 @@ import "./styles/styles.sass";
 import Skeleton from "../../loading/skeleton/skeleton";
 
 export const Details = () => {
-  const { name } = useParams();
+  const { searchedPokemonName } = useParams();
   const [dataPokemons, setDataPokemons] = useState<DataPokemonsType>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -20,8 +20,8 @@ export const Details = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (name !== undefined) {
-        const responseOfGetPokemon = await getPokemon(name);
+      if (searchedPokemonName !== undefined) {
+        const responseOfGetPokemon = await getPokemon(searchedPokemonName);
         setDataPokemons(responseOfGetPokemon);
         const urlAbilitiesArray = dataPokemons?.abilities.map((element) => {
           return element.ability.url;

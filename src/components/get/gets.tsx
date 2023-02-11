@@ -1,6 +1,6 @@
 const urlBase = "https://pokeapi.co/api/v2/";
 
-export async function getDataOfPokemon(name: string) {
+export async function getSpecieOfPokemon(name: string) {
   const response = await fetch(urlBase + `pokemon-species/${name}`);
   const json = response.json();
   return json;

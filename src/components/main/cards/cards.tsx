@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getDataOfPokemon, getEvolutions, getPokemon } from "../../get/gets";
+import { getSpecieOfPokemon, getEvolutions, getPokemon } from "../../get/gets";
 import { EvolutionChainTypes, CardDataTypes } from "../../../utils/types";
 import "./styles/styles.sass";
 import { Loading } from "../../loading/roll/loading";
@@ -19,12 +19,12 @@ export const Cards = () => {
         setIsLoading(false);
       }
     }, 2000);
-  });
+  },[nameResearch]);
 
   useEffect(() => {
     const fetchData = async () => {
       if (nameResearch !== undefined) {
-        const getDetailsPokemon = await getDataOfPokemon(nameResearch);
+        const getDetailsPokemon = await getSpecieOfPokemon(nameResearch);
         setUrlEvolutionChain(getDetailsPokemon.evolution_chain.url);
       }
     };
@@ -53,10 +53,10 @@ export const Cards = () => {
       });
 
       const evolveTo2 = evolutionChain.evolves_to.map((element) => {
-        const map = element.evolves_to.map((element) => {
+        const evolutionTwoPokemonName = element.evolves_to.map((element) => {
           return element.species.name;
         });
-        return map;
+        return evolutionTwoPokemonName;
       });
 
       evolveTo1.map((element) => {
