@@ -15,11 +15,11 @@ export const Cards = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (nameResearch !== undefined) {
+      if(nameResearch !== undefined){
         setIsLoading(false);
       }
-    }, 2000);
-  },[nameResearch]);
+    }, 1000);
+  }, [nameResearch]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,10 +53,10 @@ export const Cards = () => {
       });
 
       const evolveTo2 = evolutionChain.evolves_to.map((element) => {
-        const evolutionTwoPokemonName = element.evolves_to.map((element) => {
+        const map = element.evolves_to.map((element) => {
           return element.species.name;
         });
-        return evolutionTwoPokemonName;
+        return map;
       });
 
       evolveTo1.map((element) => {
@@ -106,13 +106,13 @@ export const Cards = () => {
           {pokeDataCards.length > 0 && (
             <>
               <h2 className="cards-text">
-                Click on the pokemon card you want to see details!
+                Click on the pokemon card you want to see etails!
               </h2>
               <ul className="cards-box">
                 {pokeDataCards.map((element: CardDataTypes, index: number) => {
                   return (
                     <Link to={`/pokemon/${element.name}`}>
-                      <li key={index} className="cards-box-card">
+                      <li key={index} className="cards-box-card" data-testid="card">
                         <img
                           className="cards-box-card-img"
                           alt="imagePokemon"

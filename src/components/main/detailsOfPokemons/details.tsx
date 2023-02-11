@@ -6,7 +6,7 @@ import "./styles/styles.sass";
 import Skeleton from "../../loading/skeleton/skeleton";
 
 export const Details = () => {
-  const { searchedPokemonName } = useParams();
+  const { name } = useParams();
   const [dataPokemons, setDataPokemons] = useState<DataPokemonsType>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -20,8 +20,8 @@ export const Details = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (searchedPokemonName !== undefined) {
-        const responseOfGetPokemon = await getPokemon(searchedPokemonName);
+      if (name !== undefined) {
+        const responseOfGetPokemon = await getPokemon(name);
         setDataPokemons(responseOfGetPokemon);
         const urlAbilitiesArray = dataPokemons?.abilities.map((element) => {
           return element.ability.url;
@@ -44,7 +44,7 @@ export const Details = () => {
         </>
       ) : (
         <>
-          <div className="details-card">
+          <div className="details-card" data-testid="card">
             <img
               className="details-card-img"
               alt="fotoPokemon"
@@ -63,7 +63,7 @@ export const Details = () => {
             </div>
           </div>
           <div>
-            <div className="details-abilities">
+            <div className="details-abilities" data-testid="abilities">
               <h3>Abilities:</h3>
               <ul className="details-abilities-box">
                 {dataPokemons?.abilities.map((element, index: number) => {
@@ -77,7 +77,7 @@ export const Details = () => {
                 })}
               </ul>
             </div>
-            <div className="details-move">
+            <div className="details-move" data-testid="move">
               <h3>Moves:</h3>
               <ul className="details-move-box">
                 {dataPokemons?.moves.map((element, index) => {
