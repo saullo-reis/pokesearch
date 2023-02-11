@@ -66,3 +66,9 @@ export interface AbilitiesData{
   }>
   name:string;
 }
+
+export interface PropsSkeleton {
+  width: number | string;
+  height: number | string;
+  borderRadius?: number;
+}
