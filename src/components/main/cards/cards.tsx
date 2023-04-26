@@ -13,13 +13,17 @@ export const Cards = () => {
   const [pokeDataCards, setPokeDataCards] = useState<CardDataTypes[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
+
+  // LOADING 
   useEffect(() => {
-    setTimeout(() => {
-      if(nameResearch !== undefined){
+    if(nameResearch !== undefined){
+      setTimeout(() => {
         setIsLoading(false);
-      }
-    }, 1000);
+      }, 1000);
+    }
   }, [nameResearch]);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -90,7 +94,6 @@ export const Cards = () => {
     fetchData();
   }, [arrayNamePokes]);
 
-  console.log(pokeDataCards);
 
   return (
     <section className="cards">

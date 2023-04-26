@@ -12,11 +12,11 @@ export const Details = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (dataPokemons !== undefined) {
+    if (dataPokemons !== undefined) {
+      setTimeout(() => {
         setIsLoading(false);
-      }
-    }, 2000);
+      }, 2000);
+    }
   }, [dataPokemons]);
 
   console.log(dataPokemons)
