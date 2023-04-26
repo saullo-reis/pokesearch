@@ -28,7 +28,7 @@ export const Input = () => {
             type="text"
             placeholder="Write the name here"
           ></input>
-          <Link className="search-button" to={`/cards/${name}`}>
+          <Link className="search-button" to={`/cards/${name.toLowerCase()}`}>
             Search
           </Link>
           <div></div>
