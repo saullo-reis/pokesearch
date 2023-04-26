@@ -13,17 +13,14 @@ export const Cards = () => {
   const [pokeDataCards, setPokeDataCards] = useState<CardDataTypes[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-
-  // LOADING 
+  // LOADING
   useEffect(() => {
-    if(nameResearch !== undefined){
+    if (nameResearch !== undefined) {
       setTimeout(() => {
         setIsLoading(false);
       }, 1000);
     }
   }, [nameResearch]);
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -94,7 +91,6 @@ export const Cards = () => {
     fetchData();
   }, [arrayNamePokes]);
 
-
   return (
     <section className="cards">
       {isLoading && <Loading />}
@@ -102,8 +98,8 @@ export const Cards = () => {
         <>
           {pokeDataCards.length === 0 && (
             <h2 className="cards-text">
-              <h2 style={{ color: "black" }}>"{nameResearch}"</h2> ou não existe
-              ou foi digitado errado.
+              <h2 style={{ color: "white" }}>"{nameResearch}"</h2> does not
+              exist or was mistyped
             </h2>
           )}
           {pokeDataCards.length > 0 && (
